@@ -29,4 +29,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: ghcr.io/philippkuntschik/nsd:latest,ghcr.io/philippkuntschik/nsd:v{{NSD_VERSION}}
+        tags: |
+          ghcr.io/philippkuntschik/nsd:v${{ env.NSD_VERSION }}
+          ghcr.io/philippkuntschik/nsd:latest
